@@ -1,0 +1,24 @@
+export default{
+    path:'/movie',
+    component:()=>import('@/views/movie'),
+    redirect:"/movie/nowPlaying",
+    //二级路由的配置
+    children:[
+        {
+            path:'city',
+            component:()=>import('@/components/city')
+        },
+        {
+            path:'nowPlaying',
+            component:()=>import('@/components/nowPlaying')
+        },
+        {  
+            path:'willComing',
+            component:()=>import('@/components/willComing')
+        },
+        {
+            path:'search',
+            component:()=>import('@/components/search')
+        },
+    ]
+}

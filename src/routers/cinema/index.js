@@ -1,0 +1,19 @@
+export default{
+    path:'/cinema',
+    component:()=>import('@/views/cinema'),
+    redirect:"/cinema/allcity",
+    children:[
+        {
+            path:'allcity',
+            component:()=>import('com/allcity')
+        }, 
+        {
+            path:'brand',
+            component:()=>import('com/brand')
+        }, 
+        {
+            path:'feature',
+            component:()=>import('com/feature')
+        },
+    ]
+}
